@@ -1,13 +1,7 @@
-import { useState } from 'react'
+import MovieBooking from "./pages/MovieBooking";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-
-    </>
-  )
+  return <MovieBooking />;
 }
 
-export default App
+export default App;
