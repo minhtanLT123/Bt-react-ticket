@@ -7,12 +7,31 @@ export default function SeatSelector() {
     return (
         <div>
             {seatLayout.map((row, index) => (
-                <div key={index} className="flex items-center mb-2">
-                    <span className="w-6 font-bold">{row.hang}</span>
+                <div key={index} className="flex items-center mb-2 ">
 
-                    {row.danhSachGhe.map((ghe) => (
-                        <Seat key={ghe.soGhe} ghe={ghe} />
-                    ))}
+                    {/* Hàng label */}
+                    {index === 0 ? (
+                        <>
+                            <span className="w-6 font-bold"></span>
+                            {row.danhSachGhe.map((ghe) => (
+                                <span
+                                    key={ghe.soGhe}
+                                    className="w-10 h-10 flex items-center justify-center mx-1 font-bold bg-transparent"
+                                >
+                                    {ghe.soGhe}
+
+                                </span>
+                            ))}
+                        </>
+                    ) : (
+                        <>
+                            {/* Các hàng ghế thật */}
+                            <span className="w-6 font-bold">{row.hang}</span>
+                            {row.danhSachGhe.map((ghe) => (
+                                <Seat key={ghe.soGhe} ghe={ghe} />
+                            ))}
+                        </>
+                    )}
                 </div>
             ))}
         </div>
