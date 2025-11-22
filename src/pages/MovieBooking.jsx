@@ -7,7 +7,7 @@ export default function MovieBooking() {
     const dispatch = useDispatch();
     return (
         <div className="container text-center" >
-            <div className="h-screen w-screen bg-cover bg-center "
+            <div className=" h-screen w-screen bg-cover bg-center "
                 style={{ backgroundImage: "url('/images/bgmovie.jpg')" }}
 
             >
@@ -21,7 +21,7 @@ export default function MovieBooking() {
                             <h1 className="bg-amber-500 w-180 p-5">Màn Hình</h1>
                             <SeatSelector />
                         </div>
-                        <div className="mt-6 p-4 rounded bg-transparent">
+                        <div className="mt-6 p-4 rounded bg-transparent h-120 overflow-y-auto border border-gray-600 border-none">
                             <div className="">
                                 <div className="flex p-2 ">
                                     <span className="w-10 h-10 border rounded mx-1 bg-red-500"></span>
